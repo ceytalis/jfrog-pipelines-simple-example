@@ -74,7 +74,7 @@ pipelines:
             - name: step_3
             - name: step_4  
           integrations:
-            - name: myGithub            
+            - name: myGitHub            
         execution:
           onExecute:
             - 'curl -H "Authorization: token ${int_myGitHub_token}" ${int_myGitHub_url}/rate_limit'
