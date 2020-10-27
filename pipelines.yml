@@ -2,7 +2,7 @@ resources:
   - name: myGitRepo
     type: GitRepo
     configuration:
-      gitProvider: myGithub
+      gitProvider: myGitHub
       path: ceytalis/jfrog-pipelines-simple-example
       branches:
         include: master
@@ -77,4 +77,4 @@ pipelines:
             - name: myGithub            
         execution:
           onExecute:
-            - 'curl -H "Authorization: token ${int_myGithub_token}" ${int_myGithub_url}/rate_limit'
+            - 'curl -H "Authorization: token ${int_myGitHub_token}" ${int_myGitHub_url}/rate_limit'
